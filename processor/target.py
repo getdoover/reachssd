@@ -259,7 +259,7 @@ class target:
                                     },
                                     "tankHeight": {
                                         "type": "uiFloatParam",
-                                        "name": "inputMax",
+                                        "name": "tankHeight",
                                         "displayString": "Tank Height (cm)",
                                         "min": 0,
                                         "max": 999
