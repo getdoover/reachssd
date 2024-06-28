@@ -234,7 +234,7 @@ class target:
                             {
                                 "label" : "Over Voltage",
                                 "min" : 3.6,
-                                "max" : 3.8,
+                                "max" : 4.2,
                                 "colour" : "yellow",
                                 "showOnGraph" : True
                             }
@@ -245,43 +245,6 @@ class target:
                         "name": "settings_submodule",
                         "displayString": "Settings",
                         "children": {
-                            "gpsAccuracy" : {
-                                "type" : "uiVariable",
-                                "varType" : "float",
-                                "name" : "gpsAccuracy",
-                                "displayString" : "GPS accuracy (m)",
-                                "decPrecision": 0,
-                                "ranges": [
-                                    {
-                                        "label" : "Good",
-                                        "min" : 0,
-                                        "max" : 15,
-                                        "colour" : "green",
-                                        "showOnGraph" : True
-                                    },
-                                    {
-                                        "label" : "Ok",
-                                        "min" : 15,
-                                        "max" : 30,
-                                        "colour" : "blue",
-                                        "showOnGraph" : True
-                                    },
-                                    {
-                                        "label" : "Bad",
-                                        "min" : 30,
-                                        "max" : 80,
-                                        "colour" : "yellow",
-                                        "showOnGraph" : True
-                                    },
-                                    {
-                                        "label" : "Lost",
-                                        "min" : 80,
-                                        "max" : 100,
-                                        "colour" : "red",
-                                        "showOnGraph" : True
-                                    }
-                                ]
-                            },
                             "sensor_settings_submodule": {
                                 "type": "uiSubmodule",
                                 "name": "sensor_settings_submodule",
@@ -503,7 +466,7 @@ class target:
                         # "connectionPeriod": 1800,
                         # "nextConnection": 1800
                         "connectionPeriod": 5,
-                        "nextConnection": 900,
+                        "nextConnection": 86400,
                     }
                 }
             }
@@ -780,6 +743,9 @@ class target:
                         },
                         "battVoltage": {
                             "currentValue" : battery_voltage,
+                        },
+                        "rssi": {
+                            "currentValue" : rssi,
                         },
                         "settings_submodule": {
                             "children": {
